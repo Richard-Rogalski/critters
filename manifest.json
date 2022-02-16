@@ -27,6 +27,6 @@
 		"page": "options/index.html"
 	},
 	"chrome_url_overrides": {
-		"newtab": "crittertab.html"
+		"newtab": "newTabPage/index.html"
 	}
 }

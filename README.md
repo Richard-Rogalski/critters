@@ -3,9 +3,9 @@ If you can think of a clever name for this project please open a discussion/issu
 If you're curious on what this is, shhhhhhhhh
 
 #### Where are my current unlocks & settings stored?
-I believe in transparency. All of these and more are stored in a JSON file. You are perfectly able to edit it yourself with no repurcussions. 
+I believe in transparency. All of these and more are stored in localStorage. You are perfectly able to edit it yourself with no repurcussions. 
 
-#### Why are three languages (HTML, XML, CSS) in one HTML file?
+#### Why are four languages (HTML, JS, XML, CSS) in one HTML file?
 I would very very very much like to know the answer to this myself. Long story short, you can only interact with an SVG if the SVG is inlined into the HTML file, at least in the way I need to. So, this monstrosity is required. If you know of a better way to do what I'm doing with SVGs, and doesn't hinder browser compatability, ***please*** pretty please with a cherry on top let me know. 
 
 #### No license?

@@ -4,12 +4,57 @@
 	<title>Critters?</title>
 	<style>
 		:root {
-			--background: #888888;
-			--critter-accent: #FFF;
+			--background: #888;
+			--critter-accent: #F00;
+			--min-wh: min(100vw, 100vh);
+		}
+
+		.SVGs {
+			border: 3px solid red;
+			width: var(--min-wh);
+			height: var(--min-wh);
+
+			--vert-margin: calc(50vh - (var(--min-wh) / 2) - 1px);
+			margin: 0 auto;
+			/*margin-top: var(--vert-margin);
+			margin-bottom: var(--vert-margin);*/
+			/*this adds vertical padding to the svg, growing the viewport without changing the aspect ratio or the svg itself
+			padding: 50px 0 50px;*/
+
+		}
+
+		.turret-closed-body {
+			fill: var(--critter-accent);
+		}
+
+		html {
+			background-color: var(--background);
 		}
 	</style>
 </head>
+
 <body>
+<script>
+	function pog() {
+
+		let root = document.documentElement;
+
+		const randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
+
+		document.documentElement.style.setProperty('--background', randomColor);
+		document.documentElement.style.setProperty('--critter-accent', 'yellow');
+
+        //alert("pog");
+    }
+</script>
+</body>
+
+
+<body onload="pog()" class="SVGs">
+<!-- setting the width and height of a viewbox both to 0 completely disables rendering of the SVG -->
+<svg viewBox="0 0 100 100" class="turret-closed" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <ellipse class="turret-closed-body" rx="50%" ry="50%" cx="50%" cy="50%"/>
+</svg>
 
 </body>
 </html>
